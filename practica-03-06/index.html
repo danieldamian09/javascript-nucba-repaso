@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manipulación del DOM</title>
+</head>
+
+<body>
+  <ul>
+    <li>Uno</li>
+    <li>Dos</li>
+    <li>Tres</li>
+  </ul>
+
+    <button type="button" onclick="traduceNumeros(espanol)">Español</button>
+    <button type="button" onclick="traduceNumeros(ingles)">Ingles</button>
+    <button type="button" onclick="traduceNumeros(italiano)">Italiano</button>
+
+  <script>
+    const espanol = ['Uno','Dos','Tres'];
+    const ingles = ['One','Two','Three'];
+    const italiano = ['Uno','Due','Tre'];
+
+    function traduceNumeros(idioma){
+      let elementoLI  = document.getElementsByTagName('li');
+      for (let i = 0; i < elementoLI.length; i++) {
+        elementoLI[i].innerHTML = idioma[i];
+      }
+    }
+  </script>
+  <!-- Humberto Rivero 👨‍💻 -->
+</body>
+
+</html>
